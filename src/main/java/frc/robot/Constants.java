@@ -16,4 +16,11 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+  public static class IntakeMotors {
+    public static final boolean INTAKE_MOTOR_1_INVERTED = true;
+    public static final int INTAKE_MOTOR_ID_1 = 0;
+
+    public static final boolean INTAKE_MOTOR_2_INVERTED = false;
+    public static final int INTAKE_MOTOR_ID_2 = 0;
+  }
 }
