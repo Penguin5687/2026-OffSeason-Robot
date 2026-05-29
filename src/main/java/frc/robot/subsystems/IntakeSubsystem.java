@@ -13,11 +13,11 @@ import com.revrobotics.spark.config.SparkMaxConfig;
 
 public class IntakeSubsystem extends SubsystemBase{
     //Intake roller. AKA rolly bar
-    private final SparkMax intakeMotor1;
-    private final SparkMaxConfig intakeConfig1;
+    public final SparkMax intakeMotor1;
+    public final SparkMaxConfig intakeConfig1;
 
-    private final SparkMax intakeMotor2;
-    private final SparkMaxConfig intakeConfig2;
+    public final SparkMax intakeMotor2;
+    public final SparkMaxConfig intakeConfig2;
     public IntakeSubsystem(){
         intakeMotor1 = new SparkMax(Constants.IntakeMotors.INTAKE_MOTOR_ID_1, MotorType.kBrushless);
         intakeConfig1 = new SparkMaxConfig();
@@ -30,7 +30,10 @@ public class IntakeSubsystem extends SubsystemBase{
         intakeConfig1.idleMode(IdleMode.kCoast);
         intakeConfig1.inverted(Constants.IntakeMotors.INTAKE_MOTOR_2_INVERTED);
         intakeMotor2.configure(intakeConfig1, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
-
-
     }
+    public void setSpeed(double speed){
+        intakeMotor1.set(speed);
+        intakeMotor2.set(speed);
+    }
+    public void 
 }
